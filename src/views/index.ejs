@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GetHelp Mockup</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="/logo.png" alt="GetHelp Logo">
+      <h1>DANA Valencia</h1>
+      <input type="search" placeholder="Buscar...">
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <ul>
+        <li>Solicitudes</li>
+        <li>Mapa</li>
+        <li>Voluntarios</li>
+      </ul>
+    </aside>
+    <section>
+      <% helpRequests.forEach(function(request) { %>
+        <div class="item">
+          <img src="<%= request.image %>" alt="<%= request.title %>">
+          <h3><%= request.title %></h3>
+          <p><%= request.distance %></p>
+          <p><%= request.description %></p>
+        </div>
+      <% }); %>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 GetHelp</p>
+  </footer>
+</body>
+</html>
